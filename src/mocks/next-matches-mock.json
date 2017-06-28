@@ -1,0 +1,13 @@
+{
+  "matches": [{
+    "assist": true,
+    "date": "2016-12-27",
+    "name": "Partido de martes",
+    "time": "18:00"
+  }, {
+    "assist": false,
+    "date": "2017-01-03",
+    "name": "Partido de martes",
+    "time": "18:00"
+  }]
+}
