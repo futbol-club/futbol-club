@@ -1,26 +1,26 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Futbol Club
 
-## How to use this template
+## Description
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+A social application to organize your fútbol (soccer) matches with friends. Play
+with them, talk to them and stay always connected.
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+## Run the project
 
-### With the Ionic CLI:
+*Note:* You may need to install `ionic` and `cordova` globally before running
+the project.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+    npm install -g cordova ionic
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start mySideMenu sidemenu
-```
+Clone this repo, use `npm` to install dependencies and then run!
 
-Then, to run it, cd into `mySideMenu` and run:
+    git clone git@github.com:futbol-club/futbol-club.git
+    npm install
+    ionic serve
 
-```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
-```
+## Build the project
 
-Substitute ios for android if not on a Mac.
+Ionic uses cordova to build the project. You just need to replace `<platform>` for
+either `android` or `ios` (just for Mac).
 
+    ionic cordova <platform>
