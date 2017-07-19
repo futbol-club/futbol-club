@@ -1,32 +1,24 @@
 var webpackConfig = require('./webpack.test.js');
 
 module.exports = function(config) {
-    var _config = {
+    config.set({
         autoWatch: true,
         basePath: '',
-        browser: ['Chrome'],
-        browserConsoleLogOptions: {
-            level: 'log',
-            format: '%b %T: %m',
-            terminal: true
-        },
+        browsers: ['PhantomJS'],
         colors: true,
-        files: [{
-            pattern: './karma-shim.js',
-            watched: true
-        }],
+        concurrency: Infinity,
+        files: [
+            './karma-shim.js'
+        ],
         frameworks: ['jasmine'],
-        logLevel: config.LOG_INFO,
-        port: 9876,
+        logLevel: config.LOG_ERROR,
         preprocessors: {
-            './karma-shim.js': ['webpack', 'sourcemap']
+            './karma-shim.js': ['webpack']
         },
-        reporters: ['kjhtml', 'dots'],
+        reporters: ['progress'],
+        port: 9876,
         singleRun: false,
         webpack: webpackConfig,
-        webpackMiddleware: { stats: 'errors-only' },
-        webpackServer: { noInfo: true }
-    };
-
-    config.set(_config);
+        webpackMiddleware: { noInfo: true }
+    });
 };

@@ -24,10 +24,16 @@ module.exports = {
     plugins: [
         new webpack.ContextReplacementPlugin(
                 /(ionic-angular)|(angular(\\|\/)core(\\|\/)@angular)/,
-            path.resolve(__dirname, './src')
+            root('./src'),
+            {}
         )
     ],
     resolve: {
         extensions: ['.ts', '.js']
+
     }
 };
+
+function root(localPath) {
+    return path.resolve(__dirname, localPath);
+}
